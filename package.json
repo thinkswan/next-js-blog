@@ -17,6 +17,8 @@
   "devDependencies": {
     "@types/node": "^17.0.34",
     "@types/react": "^18.0.9",
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.1.6",
     "gray-matter": "^4.0.3",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
