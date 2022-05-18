@@ -33,7 +33,7 @@ export default function Home({
 
       <section className={utilStyles.headingMd}>
         <p>
-          Hello, I'm <strong>Graham</strong>.
+          Hello, I&apos;m <strong>Graham</strong>.
         </p>
         <p>
           (This is a sample website - you’ll be building a site like this on{" "}
