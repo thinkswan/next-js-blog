@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import utilStyles from "../styles/utils.module.css";
 
 const name = "Graham Swan";
 export const siteTitle = "Next.js Sample Website";
@@ -37,12 +36,14 @@ export default function Layout({
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
+              className="rounded-full"
               height={144}
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className="text-4xl font-extrabold tracking-tighter my-4">
+              {name}
+            </h1>
           </>
         ) : (
           <>
@@ -51,16 +52,16 @@ export default function Layout({
                 <Image
                   priority
                   src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
+                  className="rounded-full"
                   height={108}
                   width={108}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className="text-2xl my-4">
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a className="text-inherit font-bold">{name}</a>
               </Link>
             </h2>
           </>
