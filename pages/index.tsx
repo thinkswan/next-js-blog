@@ -3,7 +3,6 @@ import Link from "next/link";
 import { getSortedPostsData } from "../lib/posts";
 import Date from "../components/date";
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
 import type { GetStaticProps } from "next";
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -31,26 +30,26 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={utilStyles.headingMd}>
+      <section className="text-xl">
         <p>
           Hello, I&apos;m <strong>Graham</strong>.
         </p>
         <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          (This is a sample website - you&apos;ll be building a site like this
+          on <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+      <section className="text-xl pt-px">
+        <h2 className="text-2xl font-bold my-4">Blog</h2>
+        <ul className="list-none p-0 m-0">
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li className="mb-5" key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small className="text-gray-500">
                 <Date dateString={date} />
               </small>
             </li>

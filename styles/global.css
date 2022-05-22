@@ -1,3 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-disc my-4 pl-10;
+  }
+}
+
 html,
 body {
   padding: 0;

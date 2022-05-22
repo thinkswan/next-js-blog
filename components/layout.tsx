@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
 
 const name = "Graham Swan";
 export const siteTitle = "Next.js Sample Website";
@@ -15,7 +13,7 @@ export default function Layout({
   home?: boolean;
 }) {
   return (
-    <div className={styles.container}>
+    <div className="max-w-xl px-4 py-0 mx-auto mt-12 mb-24">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -32,18 +30,20 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <header className={styles.header}>
+      <header className="flex flex-col items-center">
         {home ? (
           <>
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
+              className="rounded-full"
               height={144}
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className="text-4xl font-extrabold tracking-tighter my-4">
+              {name}
+            </h1>
           </>
         ) : (
           <>
@@ -52,16 +52,16 @@ export default function Layout({
                 <Image
                   priority
                   src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
+                  className="rounded-full"
                   height={108}
                   width={108}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className="text-2xl my-4">
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a className="text-inherit font-bold">{name}</a>
               </Link>
             </h2>
           </>
@@ -71,7 +71,7 @@ export default function Layout({
       <main>{children}</main>
 
       {!home && (
-        <div className={styles.backToHome}>
+        <div className="mt-12">
           <Link href="/">
             <a>← Back to home</a>
           </Link>
