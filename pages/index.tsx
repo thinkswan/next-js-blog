@@ -31,10 +31,10 @@ export default function Home({
       </Head>
 
       <section className="text-xl">
-        <p className="my-4">
+        <p>
           Hello, I&apos;m <strong>Graham</strong>.
         </p>
-        <p className="my-4">
+        <p>
           (This is a sample website - you&apos;ll be building a site like this
           on <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
